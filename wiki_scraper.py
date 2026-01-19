@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 BULBAPEDIA_URL = "https://bulbapedia.bulbagarden.net/wiki/"
 
 def get_summary(phrase):
-    # Construct URL: replace spaces with underscores
     url = f"{BULBAPEDIA_URL}{phrase.replace(' ', '_')}"
     
     try:
