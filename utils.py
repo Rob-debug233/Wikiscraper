@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
+import json
 
 def string_to_windows_safe(text):
     unsafe_chars = r':<>"/\|?*'
@@ -115,3 +116,14 @@ def analyze_frequency(df, phrase):
     print("\nValue Frequency Analysis:")
     freq = df.stack().value_counts()
     print(freq.to_string())
+
+def get_word_count_from_json(filepath):
+    """
+    Suma wszystkie wartości (counts) z podanego pliku JSON.
+    """
+    if not os.path.exists(filepath):
+        return 0
+    
+    with open(filepath, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        return sum(data.values())

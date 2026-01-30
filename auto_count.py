@@ -40,6 +40,7 @@ def auto_count_bfs(base_url, start_phrase, max_depth, wait_time):
     
     while queue:
         current_phrase, current_depth = queue.popleft()
+        print(f"Przetwarzanie: {current_phrase}")
         
         scraper = Scraper(base_url, current_phrase)
         
