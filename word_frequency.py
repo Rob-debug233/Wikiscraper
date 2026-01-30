@@ -8,8 +8,6 @@ from collections import Counter
 
 WORD_COUNTS_FILE = "word-counts.json"
 
-WORD_COUNTS_FILE = "word-counts.json"
-
 def get_word_counts():
     """Wczytuje licznik słów z pliku JSON."""
     if not os.path.exists(WORD_COUNTS_FILE):
@@ -108,5 +106,4 @@ def generate_chart(df, chart_path, n):
     plt.close()
 
 if __name__ == "__main__":
-    # Do testów manualnych
     pass

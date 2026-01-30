@@ -102,7 +102,7 @@ class TestWikiScraper(unittest.TestCase):
                 os.remove(output_file)
 
     def test_string_to_windows_safe(self):
-        """Test Windows-safe filename conversion (1-1 from test_string_to_windows_safe)"""
+        """Test Windows-safe filename conversion"""
         self.assertEqual(string_to_windows_safe("Pokémon: Red"), "Pokémon- Red")
         self.assertEqual(string_to_windows_safe("Type/Water"), "Type-Water")
 

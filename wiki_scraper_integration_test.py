@@ -25,10 +25,10 @@ def test_summary_offline():
     expected = "Lugia (Japanese: ルギア Lugia) is a dual-type Psychic/Flying Legendary Pokémon introduced in Generation II."
     
     if result == expected:
-        print("SUCCESS: Summary matches expected content.")
+        print("SUCCESS")
         sys.exit(0)
     else:
-        print("FAILURE: Summary does not match.")
+        print("FAILURE")
         print(f"Expected: {expected}")
         print(f"Got:      {result}")
         sys.exit(1)
